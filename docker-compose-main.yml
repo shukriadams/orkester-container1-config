@@ -1,11 +1,7 @@
 version: "2"
 services:
-  ubuntu-test:
-    image: ubuntu:22.04
-    container_name: ubuntu-test
+  app1:
+    image: alpine:3.20.1
+    container_name: app1
     restart: unless-stopped
-    environment:
-      TZ : here/now
-      THE_PATH: /usr/lib/something
-    volumes:
-      - ./data:/data/:rw
+    command: /bin/sh -c  "while true ;sleep 5; do continue; done"
