@@ -1,0 +1,11 @@
+version: "2"
+services:
+  ubuntu-test:
+    image: ubuntu:22.04
+    container_name: ubuntu-test
+    restart: unless-stopped
+    environment:
+      TZ : here/now
+      THE_PATH: /usr/lib/something
+    volumes:
+      - ./data:/data/:rw
